@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 200.0 to 900.0
+*/
+@font-face {
+  font-family: "PramukhRounded-Variable";
+  src:
+    url("./fonts/PramukhRounded-Variable.woff2") format("woff2"),
+    url("./fonts/PramukhRounded-Variable.woff") format("woff"),
+    url("./fonts/PramukhRounded-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+.title-font {
+  font-family: "PramukhRounded-Variable";
+  font-variation-settings: "wght" 700;
+  transition: font-variation-settings 1.5s;
+  text-transform: uppercase;
+}
+.title-font:hover {
+  font-variation-settings: "wght" 500;
+}
+
+.gradient-mask-b-0 {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 100%);
+}
+.gradient-mask-t-0 {
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+}
+
+/* Glassmorphism helpers */
+@layer components {
+  .glass-surface {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  .dark .glass-surface {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-surface-soft {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  }
+  .dark .glass-surface-soft {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .glass-input {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.375rem; /* rounded-md */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #0b0b0c;
+  }
+  .dark .glass-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #f5f5f5;
+  }
+  .glass-input::placeholder { color: rgba(0, 0, 0, 0.5); }
+  .dark .glass-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+  .glass-input:focus { outline: none; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3); }
+  .dark .glass-input:focus { box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); }
+
+  .glass-tabbar {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .dark .glass-tabbar {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-tabbar-soft {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  .dark .glass-tabbar-soft {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem; /* rounded-md */
+  padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #fff;
+  transition: filter 120ms ease;
+    background-image: linear-gradient(135deg, #FF2574 0%, #FF8AB2 100%);
+  }
+  .dark .glass-button-primary {
+    background-image: linear-gradient(135deg, #FF6B00 0%, #FFC000 100%);
+  }
+  .glass-button-primary:hover { filter: brightness(1.05); }
+
+  .text-glow-light { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2); }
+  .text-glow-dark { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
+}
