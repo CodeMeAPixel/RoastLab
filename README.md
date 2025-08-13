@@ -1,4 +1,4 @@
-# RoastLab: Because Your Website Needs a Reality Check
+# 🔥 RoastLab: Because Your Website Needs a Reality Check
 
 Welcome to RoastLab, the app that's here to lovingly tear your website apart and put it back together... maybe. We're like that brutally honest friend you never knew you needed, but for your web presence.
 
