@@ -8,6 +8,7 @@ import { openai } from "./aiClient"
 import { SEOData } from "./seoAnalyzer"
 import { sanitizeInput } from "./utils"
 
+export async function getAISuggestions(
   seoData: SEOData,
   psiData: PSIData
 ): Promise<string[]> {
