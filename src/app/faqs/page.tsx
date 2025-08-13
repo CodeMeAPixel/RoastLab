@@ -1,4 +1,4 @@
-export const metadata = { title: "FAQs | RoastLab" }
+export const metadata = { title: "FAQs" }
 
 export default function FaqsPage() {
   return (

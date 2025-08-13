@@ -1,4 +1,4 @@
-export const metadata = { title: "Disclaimer | RoastLab" }
+export const metadata = { title: "Disclaimer" }
 
 export default function DisclaimerPage() {
   return (

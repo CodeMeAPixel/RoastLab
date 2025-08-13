@@ -1,10 +1,10 @@
-export const metadata = { title: "About | RoastLab" }
+export const metadata = { title: "About" }
 
 export default function AboutPage() {
   return (
     <section className="container mx-auto max-w-3xl px-4 pt-28 lg:pt-36 text-light12 dark:text-dark12 mb-12">
       <div className="glass-surface rounded-2xl p-6">
-        <h1 className="mb-3 text-3xl font-semibold">About RoastLab</h1>
+        <h1 className="mb-3 text-3xl font-semibold">About Roast Lab</h1>
         <p className="opacity-80">
           RoastLab gives you a blunt, helpful critique of your site using real-user data and on-page signals.
           It blends Chrome UX Report (CrUX), SEO parsing, and an AI assistant to prioritize fixes that matter.

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
 import { Trash2 } from "lucide-react"
+import { FaGithub, FaDiscord, FaXTwitter } from "react-icons/fa6"
 
 import useUrlStore from "@/app/components/AppContext"
 import { ThemeSwitch } from "@/app/components/ThemeSwitch"
@@ -65,94 +66,39 @@ export function FloatNav() {
           </svg>
           <span className="sr-only">Home</span>
         </Link>
-        <Link
-          href="/about"
-          className="rounded-md p-2 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          aria-label="About"
-          title="About"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="18"
-            height="18"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 17v-4" />
-            <path d="M12 9h.01" />
-          </svg>
-          <span className="sr-only">About</span>
-        </Link>
-        <Link
-          href="/disclaimer"
-          className="rounded-md p-2 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          aria-label="Disclaimer"
-          title="Disclaimer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="18"
-            height="18"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" />
-            <path d="M12 8v5" />
-            <path d="M12 17h.01" />
-          </svg>
-          <span className="sr-only">Disclaimer</span>
-        </Link>
-        <Link
-          href="/faqs"
-          className="rounded-md p-2 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          aria-label="FAQs"
-          title="FAQs"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="18"
-            height="18"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="9" />
-            <path d="M9.5 9a2.5 2.5 0 115 0c0 1.2-.8 1.8-1.6 2.2-.7.35-.9.8-.9 1.8" />
-            <path d="M12 17h.01" />
-          </svg>
-          <span className="sr-only">FAQs</span>
-        </Link>
+
+        {/* GitHub link */}
         <a
-        href="https://x.com/RoastLabApp"
-        aria-label="Find us on X"
-        target="_blank"
-        className="flex h-auto w-auto cursor-pointer items-center justify-center gap-4 p-1"
-      >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 20 20"
-          className="fill-light12 dark:fill-dark12"
-          xmlns="http://www.w3.org/2000/svg"
+          href="https://github.com/CodeMeAPixel/RoastLab"
+          aria-label="GitHub Repository"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-auto w-auto cursor-pointer items-center justify-center gap-2 p-1"
         >
-          <path d="M14.773 2.5h2.545l-5.56 6.354 6.54 8.646h-5.12l-4.01-5.244-4.59 5.244H2.032l5.946-6.796L1.704 2.5h5.25l3.626 4.793L14.773 2.5zm-.893 13.477h1.41L6.19 3.943H4.676l9.204 12.034z"></path>
-        </svg>
-      </a>
+          <FaGithub size={18} className="text-black dark:text-white" aria-hidden="true" />
+        </a>
+
+        {/* Discord link */}
+        <a
+          href="https://discord.gg/Vv2bdC44Ge"
+          aria-label="Join us on Discord"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-auto w-auto cursor-pointer items-center justify-center gap-2 p-1"
+        >
+          <FaDiscord size={18} className="text-[#5865F2] dark:text-[#5865F2]" aria-hidden="true" />
+        </a>
+
+        {/* X/Twitter link */}
+        <a
+          href="https://x.com/RoastLabApp"
+          aria-label="Find us on X"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-auto w-auto cursor-pointer items-center justify-center gap-2 p-1"
+        >
+          <FaXTwitter size={16} className="fill-light12 dark:fill-dark12" aria-hidden="true" />
+        </a>
       </div>
      <ThemeSwitch />
     </nav>
